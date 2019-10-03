@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Logo Select</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			#tool1 {
+				position:absolute;
+				background-color: #f1f1f1;
+				padding: 20px;
+				margin: 10px;
+				border-radius: 10px;
+				left: 38.5%;
+    			margin-right: -50%;
+    			bottom: -120px;
+    			transform: translate(-50%, -50%);
+    			font-family: Roboto;
+    			font-size: 14px;
+			}
+
+			#tool2 {
+				position:absolute;
+				background-color: #f1f1f1;
+				padding: 20px;
+				margin: 10px;
+				border-radius: 10px;
+				left: 57.5%;
+    			margin-right: -50%;
+    			bottom: -100px;
+    			transform: translate(-50%, -50%);
+    			font-family: Roboto;
+    			font-size: 14px;
+			}
+
+			#logo {
+				text-align: center;
+				font-family: helvetica;	
+				font-size: 80px;	}
+		</style>
+	</head>
+
+	<body>
+		<p id="logo">Chanjoo Tiffany Park</p>
+		<div id="tool1">
+				Font&#8195;&#8195;&#8195;
+				<select id="myFonts" onchange="fontFunction()">
+						<option value="helvetica"> Helvetica </option>
+						<option value="Times New Roman"> Times New Roman </option>
+						<option value="Arial"> Arial </option>
+						<option value="Roboto"> Roboto </option>
+						<option value="courier, monospace"> Courier </option>
+						<option value="Verdana"> Verdana </option>
+						<option value="Georgia"> Georgia </option>
+						<option value="Palatino"> Palatino </option>
+						<option value="Garamond"> Garamond </option>
+						<option value="Impact"> Impact </option>			
+				</select>
+				<br>
+				<br>
+				Weight &#8195;&#8194;
+				<select id="myWeights" onchange="weightFunction()">
+						<option value="normal"> Normal </option>
+						<option value="bold"> Bold </option>
+						<option value="bolder"> Bolder </option>
+						<option value="lighter"> Lighter </option>
+				</select>
+				<br>
+				<br>
+				Style &#8195;&#8195;&#8194;
+				<select id="myStyles" onchange="styleFunction()">
+						<option value="normal"> Normal </option>
+						<option value="italic"> Italic </option>
+						<option value="oblique"> Oblique </option>
+				</select>
+				<br>
+				<br>
+				Kerning &#8195;&#8201;
+				<select id="myKernings" onchange="kerningFunction()">
+						<option value="normal"> Normal </option>
+						<option value="none"> None </option>
+				</select>
+				<br>
+				<br>
+				Color &#8195;&#8195;&#8201;
+				<select id="myColors" onchange="colorFunction()">
+						<option value="black"> Black </option>
+						<option value="darkslategray"> Dark Slate Gray </option>
+						<option value="dimgray"> Dim Gray </option>
+						<option value="gray"> Gray </option>
+						<option value="lightgray"> Light Gray </option>
+						<option value="midnightblue"> Midnight Blue </option>
+						<option value="royalblue"> Royal Blue </option>
+						<option value="cornflowerblue"> Cornflower Blue </option>
+						<option value="powderblue"> Powder Blue </option>
+						<option value="cadetblue"> Cadet Blue </option>
+						<option value="teal"> Teal </option>
+						<option value="darkseagreen"> Dark Sea Green </option>
+						<option value="darkkhaki"> Dark Khaki </option>
+						<option value="lightcoral"> Light Coral </option>
+						<option value="thistle"> Thistle </option>
+						<option value="lavender"> Lavender </option>
+						<option value="mistyrose"> Misty Rose </option>
+						<option value="rosybrown"> Rosy Brown </option>
+						<option value="plum"> Plum </option>
+						<option value="orchid"> Orchid </option>
+						<option value="maroon"> Maroon </option>
+						<option value="mediumpurple"> Medium Purple </option>
+						<option value="darkmagenta"> Dark Magenta </option>
+						<option value="mediumslateblue"> Medium Slate Blue </option>
+						<option value="slateblue"> Slate Blue </option>
+				</select>
+				<br>
+				<br>
+				Add Line  &#8194;&#8201;&#8201;
+				<select id="myDecorations" onchange="decorationFunction()">
+						<option value="none"> None </option>
+						<option value="underline"> Underline</option>
+						<option value="line-through"> Line-through</option>
+						<option value="overline"> Overline</option>
+						<option value="underline overline line-through"> All </option>
+				</select>
+				<br>
+				<br>
+				Line Color &#8201;
+				<select id="myLineColors" onchange="lineColorFunction()">
+						<option value="black"> Black </option>
+						<option value="darkslategray"> Dark Slate Gray </option>
+						<option value="dimgray"> Dim Gray </option>
+						<option value="gray"> Gray </option>
+						<option value="lightgray"> Light Gray </option>
+						<option value="midnightblue"> Midnight Blue </option>
+						<option value="royalblue"> Royal Blue </option>
+						<option value="cornflowerblue"> Cornflower Blue </option>
+						<option value="powderblue"> Powder Blue </option>
+						<option value="cadetblue"> Cadet Blue </option>
+						<option value="teal"> Teal </option>
+						<option value="darkseagreen"> Dark Sea Green </option>
+						<option value="darkkhaki"> Dark Khaki </option>
+						<option value="lightcoral"> Light Coral </option>
+						<option value="thistle"> Thistle </option>
+						<option value="lavender"> Lavender </option>
+						<option value="mistyrose"> Misty Rose </option>
+						<option value="rosybrown"> Rosy Brown </option>
+						<option value="plum"> Plum </option>
+						<option value="orchid"> Orchid </option>
+						<option value="maroon"> Maroon </option>
+						<option value="mediumpurple"> Medium Purple </option>
+						<option value="darkmagenta"> Dark Magenta </option>
+						<option value="mediumslateblue"> Medium Slate Blue </option>
+						<option value="slateblue"> Slate Blue </option>
+				</select>
+				<br>
+		</div>
+
+		<div id="tool2">
+				Size
+				<br>
+				&#8195;&#8195;<input id="size" type="range" value="80" min="10" max="150" step="1" oninput="sizeFunction()">
+				<br>
+				&#8195;
+				10px
+				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
+				150px
+				<br>
+				<br>
+				Spacing
+				<br>
+				&#8195;&#8195;<input id="spacing" type="range" value="0" min="-50" max="50" step="0.1" oninput="spacingFunction()">
+				<br>
+				&#8195;
+				- 50px
+				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;
+				+ 50px
+				<br>
+				<br>
+				Opcity
+				<br>
+				&#8195;&#8195;<input id="opacity" type="range" value="1" min="0" max="1" step="0.01" oninput="opacityFunction()">
+				<br>
+				&#8195;&#8194;
+				0%
+				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
+				100%
+				<br>
+		</div>
+
+	</body>
+	<script src="js/select_ver_scripts.js"></script>
+</html>

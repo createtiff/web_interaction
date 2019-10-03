@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Logo Click</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			#tool {
+				position:absolute;
+				background-color: #f1f1f1;
+				padding: 20px;
+				margin: 10px;
+				border-radius: 10px;
+				left: 50%;
+    			margin-right: -50%;
+    			bottom: -130px;
+    			transform: translate(-50%, -50%);
+    			font-family: Roboto;
+    			font-size: 14px;
+			}
+
+			#logo {
+				text-align: center;
+				font-family: helvetica;		}
+		</style>
+	</head>
+
+	<body>
+		<p id="logo">Chanjoo Tiffany Park</p>
+		<div id="tool">
+				Font
+				<br>
+				<input type="checkbox" id="helveticaCheck" onclick="helveticaFunction()"> Helvetica <br>
+				<input type="checkbox" id="timeNewRomanCheck" onclick="timesNewRomanFunction()"> Times New Roman <br>
+				<input type="checkbox" id="courierCheck" onclick="courierFunction()"> Courier <br>
+				<br>
+				Style
+				<br>
+				<input type="checkbox" id="boldCheck" onclick="boldFunction()"> Bold <br>
+				<input type="checkbox" id="italicCheck" onclick="italicFunction()"> Italic <br>
+				<br>
+				Color
+				<br>
+				<input type="checkbox" id="redCheck" onclick="redFunction()"> Red <br>
+				<input type="checkbox" id="blueCheck" onclick="blueFunction()"> Blue <br>
+				<input type="checkbox" id="greenCheck" onclick="greenFunction()"> Green <br>
+				<br>
+				Size
+				<br>
+				<input id="size" type="range" value="16" min="12" max="150" step="1" oninput="sizeFunction()">
+
+		</div>
+
+	</body>
+	<script src="js/click_ver_scripts.js"></script>
+</html>
