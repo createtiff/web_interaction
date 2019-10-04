@@ -5,45 +5,71 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
-			#tool1 {
-				position:absolute;
-				background-color: #f1f1f1;
-				padding: 20px;
-				margin: 10px;
-				border-radius: 10px;
-				left: 38.5%;
-    			margin-right: -50%;
-    			bottom: -120px;
-    			transform: translate(-50%, -50%);
-    			font-family: Roboto;
-    			font-size: 14px;
+			body{
+				margin: 0px;
 			}
 
-			#tool2 {
-				position:absolute;
-				background-color: #f1f1f1;
-				padding: 20px;
-				margin: 10px;
-				border-radius: 10px;
-				left: 57.5%;
-    			margin-right: -50%;
-    			bottom: -100px;
-    			transform: translate(-50%, -50%);
-    			font-family: Roboto;
-    			font-size: 14px;
+			select{
+				position: absolute;
+				width:90px;
+				left: 130px;
 			}
 
+			input{
+				width: 150px;
+			}
+			#background{
+				position: fixed;
+				background-color: white;
+				margin: 0px;
+				padding: 0px;
+				height: 100%;
+				width: 100%;
+			}
 			#logo {
 				text-align: center;
 				font-family: helvetica;	
 				font-size: 80px;	}
+
+			#tool1 {
+				position:absolute;
+				left: 38.5%;
+    			bottom: -190px;
+				margin-right: -50%;
+				background-color: #f1f1f1;
+				width: 200px;
+				padding: 20px;
+				margin: 10px;
+				border-radius: 10px;
+    			transform: translate(-50%, -50%);
+    			font-family: Roboto;
+    			font-size: 15px;
+			}
+
+			#tool2 {
+				position:absolute;
+				left: 57.5%;
+    			bottom: -109px;
+				margin-right: -50%;
+				background-color: #f1f1f1;
+				width: 200px;
+				padding: 20px;
+				margin: 10px;
+				border-radius: 10px;
+    			transform: translate(-50%, -50%);
+    			font-family: Roboto;
+    			font-size: 15px;
+			}
 		</style>
 	</head>
 
 	<body>
+	<div id="background">
 		<p id="logo">Chanjoo Tiffany Park</p>
 		<div id="tool1">
-				Font&#8195;&#8195;&#8195;
+				<center><strong><big><big>Text Style</big></big></strong></center>
+				<br>
+				Font
 				<select id="myFonts" onchange="fontFunction()">
 						<option value="helvetica"> Helvetica </option>
 						<option value="Times New Roman"> Times New Roman </option>
@@ -58,7 +84,7 @@
 				</select>
 				<br>
 				<br>
-				Weight &#8195;&#8194;
+				Weight
 				<select id="myWeights" onchange="weightFunction()">
 						<option value="normal"> Normal </option>
 						<option value="bold"> Bold </option>
@@ -67,7 +93,7 @@
 				</select>
 				<br>
 				<br>
-				Style &#8195;&#8195;&#8194;
+				Style
 				<select id="myStyles" onchange="styleFunction()">
 						<option value="normal"> Normal </option>
 						<option value="italic"> Italic </option>
@@ -75,14 +101,48 @@
 				</select>
 				<br>
 				<br>
-				Kerning &#8195;&#8201;
+				Kerning
 				<select id="myKernings" onchange="kerningFunction()">
 						<option value="normal"> Normal </option>
 						<option value="none"> None </option>
 				</select>
 				<br>
 				<br>
-				Color &#8195;&#8195;&#8201;
+				Add Line
+				<select id="myDecorations" onchange="decorationFunction()">
+						<option value="none"> None </option>
+						<option value="underline"> Underline</option>
+						<option value="line-through"> Line-through</option>
+						<option value="overline"> Overline</option>
+						<option value="underline overline line-through"> All </option>
+				</select>
+				<br>
+				<br>
+				Size
+				<br>
+				<center><input id="size" type="range" value="80" min="10" max="150" step="1" oninput="sizeFunction()"></center>
+				&#8195;
+				<small>10px</small>
+				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
+				<small>150px</small>
+				<br>
+				<br>
+				Spacing
+				<br>
+				<center><input id="spacing" type="range" value="0" min="-50" max="50" step="0.1" oninput="spacingFunction()"></center>
+				&#8194;
+				<small>- 50px</small>
+				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
+				<small>+ 50px</small>
+
+
+				
+		</div>
+
+		<div id="tool2">
+				<center><strong><big><big>Colors</big></big></strong></center>
+				<br>
+				Text
 				<select id="myColors" onchange="colorFunction()">
 						<option value="black"> Black </option>
 						<option value="darkslategray"> Dark Slate Gray </option>
@@ -112,17 +172,7 @@
 				</select>
 				<br>
 				<br>
-				Add Line  &#8194;&#8201;&#8201;
-				<select id="myDecorations" onchange="decorationFunction()">
-						<option value="none"> None </option>
-						<option value="underline"> Underline</option>
-						<option value="line-through"> Line-through</option>
-						<option value="overline"> Overline</option>
-						<option value="underline overline line-through"> All </option>
-				</select>
-				<br>
-				<br>
-				Line Color &#8201;
+				Line
 				<select id="myLineColors" onchange="lineColorFunction()">
 						<option value="black"> Black </option>
 						<option value="darkslategray"> Dark Slate Gray </option>
@@ -151,40 +201,25 @@
 						<option value="slateblue"> Slate Blue </option>
 				</select>
 				<br>
-		</div>
-
-		<div id="tool2">
-				Size
 				<br>
-				&#8195;&#8195;<input id="size" type="range" value="80" min="10" max="150" step="1" oninput="sizeFunction()">
+				Background
+				<select id="myBackgroundColors" onchange="backgroundColorFunction()">
+						<option value="white"> White </option>
+						<option value="black"> Black </option>
+						<option value="darkslategray"> Dark Slate Gray </option>
+				</select>
 				<br>
+				<br>
+				Opacity
+				<br>
+				<center><input id="opacity" type="range" value="1" min="0" max="1" step="0.01" oninput="opacityFunction()"></center>
 				&#8195;
-				10px
-				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
-				150px
-				<br>
-				<br>
-				Spacing
-				<br>
-				&#8195;&#8195;<input id="spacing" type="range" value="0" min="-50" max="50" step="0.1" oninput="spacingFunction()">
-				<br>
-				&#8195;
-				- 50px
-				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;
-				+ 50px
-				<br>
-				<br>
-				Opcity
-				<br>
-				&#8195;&#8195;<input id="opacity" type="range" value="1" min="0" max="1" step="0.01" oninput="opacityFunction()">
-				<br>
-				&#8195;&#8194;
-				0%
-				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
-				100%
+				<small>0%</small>
+				&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8194;
+				<small>100%</small>
 				<br>
 		</div>
-
+	</div>
 	</body>
 	<script src="js/select_ver_scripts.js"></script>
 </html>

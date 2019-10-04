@@ -62,6 +62,16 @@ function colorFunction(){
 	logo.style.color = checkFont;
 }
 
+//Background Color
+function backgroundColorFunction(){
+
+	var checkFont = document.getElementById("myBackgroundColors").value;
+
+	console.log(checkFont)
+
+	background.style.background = checkFont;
+}
+
 //Line Color
 function lineColorFunction(){
 
