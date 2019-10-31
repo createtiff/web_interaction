@@ -42,6 +42,16 @@ function decorationFunction(){
 	logo.style.textDecorationLine = checkFont;
 }
 
+//Text Shadow 
+function textShadowFunction(){
+
+	var checkFont = document.getElementById("myTextShadows").value;
+
+	console.log(checkFont)
+
+	logo.style.textShadow = checkFont;
+}
+
 //Kerning
 function kerningFunction(){
 
@@ -80,6 +90,16 @@ function lineColorFunction(){
 	console.log(checkFont)
 
 	logo.style.textDecorationColor = checkFont;
+}
+
+//Shadow Color
+function textShadowColorFunction(){
+
+	var checkFont = document.getElementById("myTextShadowColors").value;
+
+	console.log(checkFont)
+
+	logo.style.textShadow = checkFont;
 }
 
 

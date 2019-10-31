@@ -118,6 +118,13 @@
 				</select>
 				<br>
 				<br>
+				Add Shadow
+				<select id="myTextShadows" onchange="textShadowFunction()">
+						<option value="1px 2px 1px gray"> 1px 2px 1px </option>
+						<option value="1px 1px 1px gray"> 1px </option>
+				</select>
+				<br>
+				<br>
 				Size
 				<br>
 				<center><input id="size" type="range" value="80" min="10" max="150" step="1" oninput="sizeFunction()"></center>
@@ -141,6 +148,13 @@
 
 		<div id="tool2">
 				<center><strong><big><big>Colors</big></big></strong></center>
+				<br>
+				Shadow
+				<select id="myTextShadowColors" onchange="textShadowColorFunction()">
+						<option value="darkseagreen"> darkseagreen </option>
+						<option value="darkslategray"> Dark Slate Gray </option>
+				</select>
+				<br>
 				<br>
 				Text
 				<select id="myColors" onchange="colorFunction()">

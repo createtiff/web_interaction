@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Interface</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="botstyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<style>
+			#bot{
+				position: absolute;
+			 	top: 25%;
+			 	left: 35%;
+				width: 30vw;
+				height: 30vw;
+				border-radius: 15vw;
+				box-shadow:0 0 50vw 50vw #000000;
+				transition: 0.5s linear;
+				animation-name: animation-bot;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-bot {
+			0% { top: 25%;}
+			40% { top: 15%; }
+			70% { top: 35%; }
+			100% { top: 25%;}
+			}
+
+			#boticon{
+				position: absolute;
+			 	top: 31%;
+			 	left: 41%;
+				font-family: Roboto;
+				font-size: 10vw;
+				letter-spacing: 5vw;
+				animation-name: animation-boticon;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-boticon {
+			0% { top: 31%; -webkit-text-stroke-width: 0vw;}
+			40% { top: 21%; -webkit-text-stroke-width: 0.5vw; letter-spacing: 6vw;}
+			70% { top: 41%; -webkit-text-stroke-width: 0vw;}
+			100% { top: 31%; -webkit-text-stroke-width: 0vw;}
+			}
+
+			#mouth{
+				position: absolute;
+			 	top: 33%;
+			 	left: 48%;
+				font-family: Roboto;
+				font-size: 10vw;
+				animation-name: animation-mouth;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-mouth {
+			0% { top: 33%;}
+			40% { top: 23%; }
+			70% { top: 43%; }
+			100% { top: 33%;}
+			}
+
+			#leftpompom{
+				position: absolute;
+			 	top: 50%;
+			 	left: 39%;
+				font-family: Roboto;
+				font-size: 15vw;
+				letter-spacing: 0.3vw;
+				animation-name: animation-leftpompom;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-leftpompom {
+			0% { top: 50%; font-size: 15vw;}
+			40% { top: 35%; font-size: 20vw;}
+			70% { top: 60%; font-size: 15vw;}
+			100% { top: 50%; font-size: 15vw;}
+			}
+
+			#rightpompom{
+				position: absolute;
+			 	top: 50%;
+			 	left: 55%;
+				font-family: Roboto;
+				font-size: 15vw;
+				letter-spacing: 0.3vw;
+				animation-name: animation-rightpompom;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-rightpompom {
+			0% { top: 50%; font-size: 15vw;}
+			40% { top: 35%; font-size: 20vw;}
+			70% { top: 60%; font-size: 15vw;}
+			100% { top: 50%; font-size: 15vw;}
+			}
+		</style> 
+	</head>
+
+	<body>
+		<p>
+			<div id="bot"></div>
+			<div id="boticon"></div>
+			<div id="mouth"></div>
+			
+		</p>
+	</body>
+	<script src="jquery.js"></script>
+	<script src="draft-scripts-10-24.js"></script>
+</html>

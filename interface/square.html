@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Interface</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="botstyle.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<style>
+			a{
+				position: absolute;
+				top: 1%;
+				left: 94%;
+				text-decoration: none;
+				color: white;
+				transform: rotate(90deg);
+				font-size:5vw;
+			}
+
+			a:visited{color: white;
+			}
+
+			button{
+				position: absolute;
+				top: 69%;
+				right: 2%;
+				width: 4vw;
+				height: 4vw;
+				border-radius: 4vw;
+				background-color: white;
+			}
+
+			#resultbox{
+				display: none;
+				position: absolute;
+				bottom: 0%;
+				right: 0%;
+				width: 15vw;
+				height: 8vw;
+				background-color: white;
+				opacity: 0.4;
+				border-style: outset;
+				border-width: 1vw;
+
+				font-family: Roboto;
+				font-size: 1vw;
+				padding: 1.2vw 1vw 0.8vw 1vw;
+				line-height: 1.5vw;
+			}
+
+			#backgroundcolorresult{
+				position: absolute;
+				left: 50%;
+				top: 1.2vw;
+				font-family: Roboto;
+				font-size: 1vw;
+			}
+
+			#squareshadowcolorresult{
+				position: absolute;
+				left: 50%;
+				top: 2.65vw;
+				font-family: Roboto;
+				font-size: 1vw;
+			}
+
+			#squarecolorresult{
+				position: absolute;
+				left: 50%;
+				top: 4.1vw;
+				font-family: Roboto;
+				font-size: 1vw;
+			}
+
+			#textcolorresult{
+				position: absolute;
+				left: 50%;
+				top: 5.55vw;
+				font-family: Roboto;
+				font-size: 1vw;
+			}
+
+			#mouthcolorresult{
+				position: absolute;
+				left: 50%;
+				top: 7.05vw;
+				font-family: Roboto;
+				font-size: 1vw;
+			}
+
+			#squareshadow{
+				position: absolute;
+			 	top: 16%;
+			 	left: 30%;
+				width: 40vw;
+				height: 40vw;
+				transition: 0.5s linear;
+				animation-name: animation-bot-shadow;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-bot-shadow{
+			0% { top: 16%;}
+			40% { top: 6%; }
+			70% { top: 26%; }
+			100% { top: 16%;}
+			}
+
+			
+			#square{
+				position: absolute;
+			 	top: 25%;
+			 	left: 35%;
+				width: 30vw;
+				height: 30vw;
+				transition: 0.5s linear;
+				animation-name: animation-bot;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-bot {
+			0% { top: 25%;}
+			40% { top: 15%; }
+			70% { top: 35%; }
+			100% { top: 25%;}
+			}
+
+
+			#boticon{
+				position: absolute;
+			 	top: 31%;
+			 	left: 41%;
+				font-family: Roboto;
+				font-size: 10vw;
+				letter-spacing: 5vw;
+				animation-name: animation-boticon;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-boticon {
+			0% { top: 31%; -webkit-text-stroke-width: 0vw;}
+			40% { top: 21%; -webkit-text-stroke-width: 0.5vw; letter-spacing: 6vw;}
+			70% { top: 41%; -webkit-text-stroke-width: 0vw;}
+			100% { top: 31%; -webkit-text-stroke-width: 0vw;}
+			}
+
+			#mouth{
+				position: absolute;
+			 	top: 33%;
+			 	left: 47%;
+				font-family: Roboto;
+				font-size: 10vw;
+				animation-name: animation-mouth;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes animation-mouth {
+			0% { top: 33%;}
+			40% { top: 23%; }
+			70% { top: 43%; }
+			100% { top: 33%;}
+			}
+
+		</style> 
+	</head>
+
+	<body>
+		<a href="">↻</a>
+		<p>
+			<div id="squareshadow"></div>
+			<div id="square"></div>
+			<div id="boticon"></div>
+			<div id="mouth"></div>
+
+			<button onclick="myFunction()"></button>
+
+			<div id="resultbox">
+				Background<br>
+				Shadow<br>
+				Body<br>
+				Eyes<br>
+				Mouth
+
+				<div id="backgroundcolorresult"></div>
+				<div id="squareshadowcolorresult"></div>
+				<div id="squarecolorresult"></div>
+				<div id="textcolorresult"></div>
+				<div id="mouthcolorresult"></div>
+			</div>
+			
+			
+		</p>
+	</body>
+	<script src="jquery.js"></script>
+	<script src="square.js"></script>
+</html>
