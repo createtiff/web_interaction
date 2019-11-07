@@ -16,7 +16,7 @@ $(document).ready(function(){
 	var randomShadow = shadowArray[Math.floor(Math.random()*shadowArray.length)]
 	$('#circle').css('box-shadow', randomShadow)
 
-	var faces = ['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG', 'HH', ' II', 'JJ', 'KK', 'LL', 'MM', 'NN', 'OO', 'PP', 'QQ', 'RR', 'SS', 'TT', 'UU', 'VV', 'WW', 'XX', 'YY', 'ZZ', '11', '22', '3 3', '44', '55', '66', '77', '88', '99', '0 0', '! !', '? ?', '//', '@@', '##', '$$', '%%', '^^', '&&', '* *', ") (", '©©', '--', '++', '==', "' '", ' " "', '~~', '` `', '> <', '>>', '< <', "¶¶", 'ºº', ' °°', '÷÷', 'øø', 'ΘΘ', 'ΔΔ', 'ΛΛ', 'ΦΦ', 'ㄱㄱ', 'ㄴㄴ', 'ㄷㄷ', 'ㄹㄹ', 'ㅁㅁ', 'ㅂㅂ', 'ㅅㅅ', 'ㅇㅇ', 'ㅈㅈ', 'ㅊㅊ', 'ㅋㅋ', 'ㅌㅌ', 'ㅍㅍ', 'ㅎㅎ', 'ㅜㅜ', 'ㅠㅠ', 'ㅗㅗ', 'ㅛㅛ'] 
+	var faces = ['♛♛'] 
 	var randomFace = faces[Math.floor(Math.random()*faces.length)]
 	$('#boticon').text(randomFace)
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
 	var randomTextColor = textColorArray[Math.floor(Math.random()*textColorArray.length)]
 	$('#boticon').css('color', randomTextColor)
 
-	var mouth = ['_', '__', '___', '◡', '‿', 'ᴗ', 'ᴗ', '｡', '○', '◇', 'ω', 'Д', '▿', '∀', '▽ ', '∇'] 
+	var mouth = ['_', '__', '◡', '‿', 'ᴗ', 'ᴗ'] 
 	var randomMouth = mouth[Math.floor(Math.random()*mouth.length)]
 	$('#mouth').text(randomMouth)
 
